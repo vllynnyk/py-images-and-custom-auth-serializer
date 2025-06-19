@@ -44,6 +44,8 @@ class UserManager(DjangoUserManager):
 
 class User(AbstractUser):
 
+    use_in_migrations = True
+
     username = None
     email = models.EmailField(_("email address"), unique=True)
 
